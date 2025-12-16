@@ -65,7 +65,7 @@ function openSprintInSidebar(sprintNum) {
     otherSprint.querySelector(".sprint-header").classList.remove("active");
 }
 
-function loadContent(reportName, reportType, sprintNum) {
+async function loadContent(reportName, reportType, sprintNum) {
     localStorage.setItem("currentSprint", sprintNum);
     localStorage.setItem("currentReport", reportType);
     localStorage.setItem("currentReportName", reportName);
@@ -93,13 +93,7 @@ function loadContent(reportName, reportType, sprintNum) {
     }
 
     const contentMap = {
-        "bug-1": `
-                    <div style="padding: 20px; background-color: var(--bg-light); border-radius: 8px;">
-                        <h2 style="margin-bottom: 15px; color: var(--blue);">Sprint 1 - Bug Report</h2>
-                        <p>This would load from <code>bug-sprint-1.html</code></p>
-                        <p style="margin-top: 10px; font-size: 14px; color: #666;">Create bug-sprint-1.html file to display your bug reports here</p>
-                    </div>
-                `,
+        "bug-1": await fetch('./app/pages/sprint.one.bug.html').then(r => r.text()),
         "api-1": `
                     <div style="padding: 20px; background-color: var(--bg-light); border-radius: 8px;">
                         <h2 style="margin-bottom: 15px; color: var(--green);">Sprint 1 - API Test Report</h2>

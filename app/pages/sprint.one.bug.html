@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug Report</title>
+    <link rel="stylesheet" href="../styles/sprint.one.bug.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="scroll-x">
+        <div class="table-wrapper">
+          <table id="bugTable">
+            <thead>
+              <tr>
+                <th>
+                  <button onclick="openDropdown(event, 'bugId')">Bug ID</button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'module')">
+                    Module
+                  </button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'bugType')">
+                    Bug Type
+                  </button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'bugDescription')">
+                    Description
+                  </button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'bugRequirement')">
+                    Requirement
+                  </button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'bugPriority')">
+                    Priority
+                  </button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'bugStatus')">
+                    Status
+                  </button>
+                </th>
+                <th>
+                  <button onclick="openDropdown(event, 'bugReportedBy')">
+                    By
+                  </button>
+                </th>
+              </tr>
+            </thead>
+          </table>
+          <div class="scroll-container">
+            <table>
+              <tbody id="bugTableBody">
+                <tr>
+                  <td colspan="8" class="loading">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="bugIdDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Bug ID..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugId')"
+                id="bugIdClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="moduleDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Module..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('module')"
+                id="moduleClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="bugTypeDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Bug Type..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugType')"
+                id="bugTypeClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="bugDescriptionDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Description..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugDescription')"
+                id="bugDescriptionClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="bugRequirementDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Requirement..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugRequirement')"
+                id="bugRequirementClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="bugPriorityDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Priority..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugPriority')"
+                id="bugPriorityClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="bugStatusDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Status..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugStatus')"
+                id="bugStatusClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+          <div id="bugReportedByDropdown" class="dropdown">
+            <div class="dropdown-search">
+              <input
+                type="text"
+                placeholder="Search Reporter..."
+                class="dropdown-input"
+              />
+              <button
+                class="clear-btn"
+                onclick="clearFilter('bugReportedBy')"
+                id="bugReportedByClear"
+                disabled
+              >
+                Clear
+              </button>
+            </div>
+            <div class="dropdown-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/sprint.one.bug.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+[
+  {
+    "bugId": "BUG-1012",
+    "module": "Login",
+    "bugType": "Functional",
+    "bugDescription": "User is able to log in without entering a password.",
+    "bugRequirement": "System should validate mandatory login fields.",
+    "bugPriority": "High",
+    "bugStatus": "Open",
+    "bugReportedBy": "https://res.cloudinary.com/dvytvjplt/image/upload/v1765866608/profile_pricture_oemv94.jpg",
+    "comment": "Reproducible on all browsers."
+  },
+  {
+    "bugId": "BUG-1013",
+    "module": "Dashboard",
+    "bugType": "UI",
+    "bugDescription": "Dashboard cards overlap on mobile view.",
+    "bugRequirement": "UI should be responsive on all screen sizes.",
+    "bugPriority": "Medium",
+    "bugStatus": "In Progress",
+    "bugReportedBy": "New",
+    "comment": "Occurs on screen width below 375px."
+  }
+]
